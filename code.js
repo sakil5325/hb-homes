@@ -1,19 +1,16 @@
-const slider = document.querySelector('.slides');
-const images = document.querySelectorAll('.slides img');
+const slider = document.getElementById("sliderWrapper");
+const slides = slider.querySelectorAll("img");
 let currentIndex = 0;
+const totalSlides = slides.length;
 
-// Set slider to loop through images
-function slideShow() {
+function slide() {
   currentIndex++;
-  if (currentIndex >= images.length) {
+  if (currentIndex >= totalSlides) {
     currentIndex = 0;
   }
-  const offset = -currentIndex * 100; // Calculate offset based on index
-  slider.style.transform = `translateX(${offset}%)`;
+  slider.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
-
-// Change image every 3 seconds
-setInterval(slideShow, 3000);
+setInterval(slide, 3000); // Slide every 3 seconds
 
 const accordionHeaders = document.querySelectorAll('.accordion-header');
 
@@ -53,3 +50,36 @@ document.querySelectorAll('.faq-question').forEach(question => {
                 if (!isOpen) question.classList.add('active');
             });
         });
+
+
+document.querySelectorAll(".dropdown").forEach(dropdown => {
+  const selected = dropdown.querySelector(".selected");
+  const options = dropdown.querySelector(".dropdown-options");
+  const input = dropdown.querySelector("input[type='hidden']");
+
+  dropdown.addEventListener("click", () => {
+    options.style.display = options.style.display === "block" ? "none" : "block";
+  });
+
+  options.querySelectorAll("li").forEach(option => {
+    option.addEventListener("click", () => {
+      selected.textContent = option.textContent;
+      input.value = option.dataset.value;
+      options.style.display = "none";
+    });
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!dropdown.contains(e.target)) {
+      options.style.display = "none";
+    }
+  });
+
+  dropdown.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      options.style.display = options.style.display === "block" ? "none" : "block";
+    }
+  });
+});
+
