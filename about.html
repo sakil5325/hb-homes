@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honey Badger Homes</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html#home">
+                <img src="logo.png" alt="Honey Badger Homes Logo">
+            </a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#blog">Blog</a>
+            <a href="about.html">About Us</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+        <div class="right-section">
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=61571244596447&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://pin.it/19YzGJDRN" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-pinterest"></i></a>
+                <a href="https://www.instagram.com/hbhhomes07?igsh=MWZqenR0M3JjdHBlcA==" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.houzz.in/pro/honeybadger-homes/honey-badger-homes" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-houzz"></i></a>
+            </div>
+            <div class="contact">
+                Call Us: +91 8460-801-361
+            </div>
+        </div>
+    </header>
+    
+<!--ABOUt SEC-->
+<section class="design-section" id="about">
+    <div class="abt-img"> <img src="b.jpg"></div>
+    <div class="content">
+      <h1>Innovating Interior & Architectural Excellence</h1>
+      <p>VA, a Gujarat-based company with 12 years of expertise, specializes in innovative Interior Design and Architecture. With a deep understanding of market trends, we continuously introduce new concepts and solutions.</p>
+      <p>We proudly launch <strong style="color:#555;">Honey Badger Homes (HBH)</strong>—a premium brand in collaboration with an international partner, debuting in <strong style="color:#555;">Vadodara and New Delhi</strong>. Led by <strong style="color:#555;">Mr. Ab.</strong> and six co-founders, HBH is set to redefine industry standards through cutting-edge designs and a commitment to client satisfaction.</p>
+      <!--<button class="about-btn">ABOUT US →</button>-->
+    </div>
+  </section>
+
+    <!--FOOtER INFOR SEC-->
+    <div class="info-section">
+            <div class="info-item">
+                <div class="icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <h3>Contact Info</h3>
+                <p>+91 8460-801-361</p>
+            </div>
+            <div class="info-item">
+                <div class="icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>Studio</h3>
+                <p>Shop No. 111 first floor Nilamber belissiom 3<br>Vasant Vihar, Bhayli, Vadodara, Gujarat 390410</p>
+                <p><strong>Country:</strong> India & Canada </p>
+                <p><strong>Cities:</strong> Vadodara, New-Delhi </p>
+              </div>
+            <div class="info-item">
+                <div class="icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>Working Hours</h3>
+                <p>Tue-Sun: 10:am - 8:00pm<br>Monday - Closed</p>
+            </div>
+        </div>
+
+
+        <script src="https://kit.fontawesome.com/cd393e7f19.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="code.js"></script>
+        <script>
+        // Add this JavaScript at the end of your body tag
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
+        const navLinks = document.querySelectorAll('nav a');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!nav.contains(e.target) && !hamburger.contains(e.target) && nav.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+            }
+        });
+    </script>
+    </body>
+    </html>

@@ -22,7 +22,7 @@
             <a href="index.html#services">Services</a>
             <a href="index.html#projects">Projects</a>
             <a href="index.html#blog">Blog</a>
-            <a href="index.html#about">About Us</a>
+            <a href="about.html">About Us</a>
             <a href="index.html#contact">Contact</a>
         </nav>
         <div class="right-section">
@@ -39,89 +39,86 @@
     </header>
     
     <div class="getcontainer">
-        <h2 class="form-title">Get Estimate</h2>
-        <form action="https://formspree.io/f/mrbpyvjq" method="POST" lass="getform" >
-            <div class="form-row">
-                <div class="form-group">
-                  <label for="name">Client Name</label>
-                  <input type="text" name="name" placeholder="Enter your name" required>
-                </div>
-              </div>              
-          
-              <!-- Email & Phone -->
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" name="email" placeholder="Enter your email" required>
-                </div>
-                <div class="form-group">
-                  <label for="phone">Phone Number</label>
-                  <input type="tel" name="phone" placeholder="Enter your number" required>
-                </div>
-              </div>
-          
-              <!-- Project Type & Residential Space -->
-              <div class="form-row">
-                <div class="form-group custom-dropdown">
-                  <label for="project">Project Type</label>
-                  <div class="dropdown" tabindex="0">
-                    <div class="selected">Select a project</div>
-                    <ul class="dropdown-options">
-                      <li data-value="interior">Interior</li>
-                      <li data-value="architectural">Architectural</li>
-                      <li data-value="prefab">Prefab Homes</li>
-                    </ul>
-                    <input type="hidden" name="project">
-                  </div>
-                </div>
-          
-                <div class="form-group custom-dropdown">
-                  <label for="residential_space">Residential Space</label>
-                  <div class="dropdown" tabindex="0">
-                    <div class="selected">Select a space</div>
-                    <ul class="dropdown-options">
-                      <li data-value="4bhk">4BHK</li>
-                      <li data-value="3bhk">3BHK</li>
-                      <li data-value="1bhk">1BHK</li>
-                    </ul>
-                    <input type="hidden" name="residential_space">
-                  </div>
-                </div>
-              </div>
-          
-              <!-- House Type & Interior -->
-              <div class="form-row">
-                <div class="form-group custom-dropdown">
-                  <label for="house_type">House Type</label>
-                  <div class="dropdown" tabindex="0">
-                    <div class="selected">Select house type</div>
-                    <ul class="dropdown-options">
-                      <li data-value="apartments">Apartments</li>
-                      <li data-value="individual">Individual Homes</li>
-                    </ul>
-                    <input type="hidden" name="house_type">
-                  </div>
-                </div>
-          
-                <div class="form-group custom-dropdown">
-                  <label for="interior_type">Full Home Interior</label>
-                  <div class="dropdown" tabindex="0">
-                    <div class="selected">Select interior type</div>
-                    <ul class="dropdown-options">
-                      <li data-value="furniture">Only Furniture</li>
-                      <li data-value="essentials">Only Essentials</li>
-                    </ul>
-                    <input type="hidden" name="interior_type">
-                  </div>
-                </div>
-              </div>
-          
-              <!-- Submit Button -->
-              <div class="form-group" style="text-align: center;">
-                <button type="submit" class="getbutton">Submit</button>
-              </div>
-        </form>
-    </div>
+      <h2 class="form-title">Get Estimate</h2>
+      <form action="https://formspree.io/f/mrbpyvjq" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Client Name</label>
+            <input type="text" name="name" placeholder="Enter your name" required>
+          </div>
+        </div>
+  
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" name="phone" placeholder="Enter your number" required>
+          </div>
+        </div>
+  
+        <div class="form-row">
+          <div class="form-group custom-dropdown">
+            <label for="project">Project Type</label>
+            <div class="dropdown" tabindex="0">
+              <div class="selected">Select a project</div>
+              <ul class="dropdown-options">
+                <li data-value="interior">Interior</li>
+                <li data-value="architectural">Architectural</li>
+                <li data-value="prefab">Prefabi Homes</li>
+              </ul>
+              <input type="hidden" name="project">
+            </div>
+          </div>
+  
+          <div class="form-group custom-dropdown">
+            <label for="residential_space">Residential Space</label>
+            <div class="dropdown" tabindex="0">
+              <div class="selected">Select a space</div>
+              <ul class="dropdown-options">
+                <li data-value="4bhk">4BHK</li>
+                <li data-value="3bhk">3BHK</li>
+                <li data-value="1bhk">1BHK</li>
+              </ul>
+              <input type="hidden" name="residential_space">
+            </div>
+          </div>
+        </div>
+  
+        <div class="form-row">
+          <div class="form-group custom-dropdown">
+            <label for="house_type">House Type</label>
+            <div class="dropdown" tabindex="0">
+              <div class="selected">Select house type</div>
+              <ul class="dropdown-options">
+                <li data-value="apartments">Apartments</li>
+                <li data-value="individual">Individual Homes</li>
+              </ul>
+              <input type="hidden" name="house_type">
+            </div>
+          </div>
+  
+          <div class="form-group custom-dropdown">
+            <label for="interior_type">Full Home Interior</label>
+            <div class="dropdown" tabindex="0">
+              <div class="selected">Select interior type</div>
+              <ul class="dropdown-options">
+                <li data-value="furniture">Only Furniture</li>
+                <li data-value="essentials">Only Essentials</li>
+              </ul>
+              <input type="hidden" name="interior_type">
+            </div>
+          </div>
+        </div>
+  
+        <div class="form-group" style="text-align: center;">
+          <button type="submit" class="getbutton">Submit</button>
+        </div>
+      </form>
+  </div>
+  
     <!--FOOtER INFOR SEC-->
     <div class="info-section">
             <div class="info-item">
@@ -137,7 +134,9 @@
                 </div>
                 <h3>Studio</h3>
                 <p>Shop No. 111 first floor Nilamber belissiom 3<br>Vasant Vihar, Bhayli, Vadodara, Gujarat 390410</p>
-            </div>
+                <p><strong>Country:</strong> India & Canada </p>
+                <p><strong>Cities:</strong> Vadodara, New-Delhi </p>
+              </div>
             <div class="info-item">
                 <div class="icon">
                     <i class="fas fa-clock"></i>
@@ -177,5 +176,40 @@
             }
         });
     </script>
+
+<script>
+document.querySelectorAll(".dropdown").forEach(dropdown => {
+  const selected = dropdown.querySelector(".selected");
+  const options = dropdown.querySelector(".dropdown-options");
+  const input = dropdown.querySelector("input[type='hidden']");
+
+  // Toggle dropdown visibility when clicked
+  dropdown.addEventListener("click", (event) => {
+    event.stopPropagation(); // Prevent closing if clicking inside dropdown
+    options.style.display = options.style.display === "block" ? "none" : "block";
+  });
+
+  // When an option is clicked, select it and close the dropdown
+  options.querySelectorAll("li").forEach(option => {
+    option.addEventListener("click", (event) => {
+      selected.textContent = option.textContent;  // Update the selected option
+      input.value = option.dataset.value;  // Update the hidden input value
+      options.style.display = "none";  // Close the dropdown immediately
+    });
+  });
+});
+
+// Close dropdown if clicking anywhere outside the dropdown
+document.addEventListener("click", (e) => {
+  const openDropdowns = document.querySelectorAll(".dropdown-options");
+  openDropdowns.forEach(dropdown => {
+    // Close the dropdown if it is visible and the click is outside it
+    if (dropdown.style.display === "block" && !dropdown.contains(e.target)) {
+      dropdown.style.display = "none";
+    }
+  });
+});
+
+</script>
     </body>
     </html>

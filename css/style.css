@@ -196,6 +196,7 @@ main {
     padding: 80px 40px;
     flex-wrap: wrap;
     text-align: left;
+    margin: -50px;
   }
   .abt-img img {
     height: 550px;
@@ -1134,27 +1135,27 @@ textarea:focus {
     }
 }
 
-  /* get estimate section */     
-  .getcontainer {
+ /* get estimate section */     
+ .getcontainer {
     max-width: 550px;
-    margin: 40px auto;               
+    margin: 40px auto;
     padding: 30px;
-    border: 1px solid #ddd;          
-    border-radius: 12px;            
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
-    background-color: #fff;         
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
     font-family: Arial, sans-serif;
   }
-
+  
   .form-title {
-  text-align: center;
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  margin-top: 0;
-  color: #222;
-  font-family: Arial, sans-serif;
-}
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 0;
+    color: #222;
+  }
+  
   .form-group {
     display: flex;
     flex-direction: column;
@@ -1185,7 +1186,6 @@ textarea:focus {
     width: 100%;
   }
   
-  /* Custom Dropdown */ 
   .custom-dropdown {
     position: relative;
   }
@@ -1199,10 +1199,10 @@ textarea:focus {
     user-select: none;
     background-color: #ccc;
   }
- 
+  
   .dropdown:focus {
     outline: none;
-    box-shadow: 0 0 4px rgba(0,0,0,0.2);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   }
   
   .selected {
@@ -1210,8 +1210,8 @@ textarea:focus {
   }
   
   .dropdown-options {
-    list-style: none;          
-    margin: 0;                  
+    list-style: none;
+    margin: 0;
     padding: 0;
     display: none;
     position: absolute;
@@ -1238,12 +1238,9 @@ textarea:focus {
     color: #333;
     cursor: pointer;
   }
-  input[name="name"] {
-    width: 210%; 
-  }
   
   .getbutton {
-    padding: 15px 40px;        
+    padding: 15px 40px;
     border: none;
     border-radius: 8px;
     background-color: #333;
@@ -1251,7 +1248,10 @@ textarea:focus {
     font-size: 16px;
     cursor: pointer;
     transition: 0.2s;
-    display: block;          
-    margin: 0 auto;  
-    margin-bottom: -20px;        
+    display: block;
+    margin: 0 auto;
+    margin-bottom: -20px;
+  }
+  input[name="name"] {
+    width: 200%; /* or any % or px value you like */
   }

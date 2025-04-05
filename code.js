@@ -57,29 +57,25 @@ document.querySelectorAll(".dropdown").forEach(dropdown => {
   const options = dropdown.querySelector(".dropdown-options");
   const input = dropdown.querySelector("input[type='hidden']");
 
-  dropdown.addEventListener("click", () => {
+  // Show the options when dropdown is clicked
+  dropdown.addEventListener("click", (event) => {
+    event.stopPropagation();  // Prevent closing when clicking inside the dropdown
     options.style.display = options.style.display === "block" ? "none" : "block";
   });
 
+  // When an option is clicked, close the dropdown and set the value
   options.querySelectorAll("li").forEach(option => {
-    option.addEventListener("click", () => {
-      selected.textContent = option.textContent;
-      input.value = option.dataset.value;
+    option.addEventListener("click", (event) => {
+      selected.textContent = option.textContent;  // Set the selected option text
+      input.value = option.dataset.value;  // Set the hidden input value
+
+      // Close the dropdown after selection
       options.style.display = "none";
     });
   });
 
-  document.addEventListener("click", (e) => {
-    if (!dropdown.contains(e.target)) {
-      options.style.display = "none";
-    }
-  });
-
-  dropdown.addEventListener("keydown", (e) => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      options.style.display = options.style.display === "block" ? "none" : "block";
-    }
+  // Close the dropdown if clicked outside
+  document.addEventListener("click", () => {
+    options.style.display = "none";
   });
 });
-
